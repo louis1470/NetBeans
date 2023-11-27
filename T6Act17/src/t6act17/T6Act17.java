@@ -24,8 +24,7 @@ public class T6Act17 {
             num[i] = (int)(Math.random()*(max - min) + min);
         }
         Arrays.sort(num);
-        System.out.println(Arrays.toString(num));
-        
+        System.out.println("My array: " + Arrays.toString(num));
     }
     
 }
