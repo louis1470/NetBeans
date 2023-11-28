@@ -69,14 +69,14 @@ public class Escacs_Louis_Payne {
         System.out.println("Puntuació mitjana = " + (cont / nom.length) + "\n");
         System.out.println("//// Nom i puntuacions de tots els jugadors ////");
         for (int j = 0; j < nom.length; j++) {
-            System.out.println(nom[j] + " ha aconseguit " + punt[j] + " punts");
+            System.out.println(nom[j].toLowerCase() + " ha aconseguit " + punt[j] + " punts");
 
         }
         System.out.println("");
         System.out.println("//// Només els jugadors que han superat la fase prèvia ////");
         for (int i = 0; i < nom.length; i++) {
             if (superat[i] == 1) {
-                System.out.println(nom[i] + " ha aconseguit " + punt[i] + " punts");
+                System.out.println(nom[i].toLowerCase() + " ha aconseguit " + punt[i] + " punts");
             }
         }
 
