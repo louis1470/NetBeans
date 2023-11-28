@@ -15,16 +15,18 @@ public class PruebaString {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String s1 = "prova de text";
-        String s2 = "Prova de Text";
-        System.out.println("Comparamos si son iguales: ");
-        System.out.println(s1.equals(s2));
-        System.out.println("Sin tener en cuenta las mayusculas:");
-        System.out.println(s1.equalsIgnoreCase(s2));
-        System.out.println("Comparamos por ordren alfabetico:");
-        System.out.println(s1.compareTo(s2));
-        System.out.println("Comparamos por orden alfabetico sin tener en cuenta las mayusculas:");
-        System.out.println(s1.compareToIgnoreCase(s2));
+        //String s1 = "prova de text";
+        //String s2 = "Prova de Text";
+        //System.out.println("Comparamos si son iguales: ");
+        //System.out.println(s1.equals(s2));
+        //System.out.println("Sin tener en cuenta las mayusculas:");
+        //System.out.println(s1.equalsIgnoreCase(s2));
+        //System.out.println("Comparamos por ordren alfabetico:");
+        //System.out.println(s1.compareTo(s2));
+        //System.out.println("Comparamos por orden alfabetico sin tener en cuenta las mayusculas:");
+        //System.out.println(s1.compareToIgnoreCase(s2));
+        float fl = 1.549532f;
+        System.out.println(String.format("%.2f", fl));
     }
     
 }
