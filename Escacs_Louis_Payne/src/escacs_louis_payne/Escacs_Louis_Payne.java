@@ -22,11 +22,11 @@ public class Escacs_Louis_Payne {
         int n, min = 2;
         boolean bucle = true;
         float cont = 0;
-        System.out.println("Dona'm la quantitat màxima de jugadors: ");
+        System.out.print("Dona'm la quantitat màxima de jugadors: ");
         n = entrada.nextInt();
-        while (n < min) {
+        while (n <= min) {
             System.out.println("Error");
-            System.out.println("Dona'm la quantitat màxima de jugadors: ");
+            System.out.print("Dona'm la quantitat màxima de jugadors: ");
             n = entrada.nextInt();
         }
         String nom[] = new String[(int) (Math.random() * (n - (min + 1)) + (min + 1))];
@@ -34,19 +34,19 @@ public class Escacs_Louis_Payne {
         int superat[] = new int[nom.length];
         entrada.nextLine();
         for (int i = 0; i < nom.length; i++) {
-            System.out.println("Nom: ");
+            System.out.print("Nom: ");
             nom[i] = entrada.nextLine();
-            System.out.println("Nota entre 1.0 y 2.0: ");
+            System.out.print("Nota entre 1.0 y 2.0: ");
             punt[i] = entrada.nextFloat();
             cont += punt[i];
             while (punt[i] < 1 || punt[i] > 2) {
                 System.out.println("Error");
-                System.out.println("Nota entre 1.0 y 2.0: ");
+                System.out.print("Nota entre 1.0 y 2.0: ");
                 punt[i] = entrada.nextFloat();
             }
             bucle = true;
             while (bucle) {
-                System.out.println("Ha superat la fase previa del torneig? Indicau amb 1 per a superat o  2 per a insuperat: ");
+                System.out.print("Ha superat la fase previa del torneig? Indicau amb 1 per a superat o  2 per a insuperat: ");
                 superat[i] = entrada.nextInt();
                 switch (superat[i]) {
                     case 1:
@@ -63,6 +63,7 @@ public class Escacs_Louis_Payne {
             entrada.nextLine();
 
         }
+        System.out.println("");
         System.out.println("######### RESULTATS #########");
         System.out.println("Total jugadors = " + nom.length);
         System.out.println("Puntuació mitjana = " + (cont / nom.length) + "\n");
