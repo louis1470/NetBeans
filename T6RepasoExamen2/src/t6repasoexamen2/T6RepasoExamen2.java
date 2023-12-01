@@ -21,9 +21,15 @@ public class T6RepasoExamen2 {
         int n;
         System.out.print("Altura de la U: ");
         n = entrada.nextInt();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (j == 0 || j == n - 1) {
+        while (n <= 2) {
+            System.out.println("Error");
+            System.out.print("Altura de la U: ");
+            n = entrada.nextInt();
+
+        }
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (j == 1 || j == n) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
@@ -34,7 +40,7 @@ public class T6RepasoExamen2 {
         for (int i = 1; i <= n; i++) {
             if (i == 1 || i == n) {
                 System.out.print(" ");
-            }else {
+            } else {
                 System.out.print("*");
             }
         }
