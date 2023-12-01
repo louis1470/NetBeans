@@ -18,13 +18,14 @@ public class T6RepasoExamen {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        int i, c1 = 0, max = 10000;
-        double c2 = 0;
+        int i, c1 = 0, max = 10000, c2 = 0;
+         
         for ( i = 0; c1 < max; i++) {
             System.out.print("Dame un numero: ");
-            c2 = entrada.nextDouble();
+            c2 = entrada.nextInt();
             c1 += c2;
         }
+        System.out.println("");
         System.out.println("La media es: " + (c1/i));
         System.out.println("El total acumulado es: " + c1);
         System.out.println("La cantidad de numeros inseridos es: " + i);
