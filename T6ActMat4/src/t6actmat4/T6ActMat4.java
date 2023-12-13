@@ -18,26 +18,28 @@ public class T6ActMat4 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        float notes[][] = new float[3][2];
-        float  mitja[] = new float[notes.length], maxtot[] = new float[notes.length], mintot[] = new float[notes.length];
+        double notes[][] = new double[2][3];
+        double mitja[] = new double[notes.length], maxtot[] = new double[notes.length], mintot[] = new double[notes.length];
+        mintot[] = double ;
         for (int i = 0; i < notes.length; i++) {
             float sum = 0;
-            for (int j = 0; j < notes[i].length; j++) {             
-                System.out.print("Introduce la nota " + (j+1) + " del alumno " + (i+1) + " : ");
-                notes[j][i] = entrada.nextFloat();
+            for (int j = 0; j < notes[i].length; j++) {
+                System.out.print("Introduce la nota " + (j + 1) + " del alumno " + (i + 1) + " : ");
+                notes[i][j] = entrada.nextFloat();
                 if (notes[i][j] > maxtot[i]) {
                     maxtot[i] = notes[i][j];
-                }else if (notes[i][j] < mintot[i]) {
+                }
+                if (notes[i][j] < mintot[i]) {
                     mintot[i] = notes[i][j];
                 }
-            sum += notes[j][i];
+                sum += notes[i][j];
             }
-            mitja[i] = sum/notes[i].length;
+            mitja[i] = sum / notes[i].length;
         }
         for (int i = 0; i < notes.length; i++) {
-            System.out.println("La nota mitjana del alumne " + (i+1) + " es " + mitja[i] + "\nLa nota minima del alumne " + (i+1) + " es " + maxtot[i] + "\nLa nota maxima del alumne " + (i+1) + " es " + maxtot[i]);
-            
+            System.out.println("La nota mitjana del alumne " + (i + 1) + " es " + mitja[i] + "\nLa nota minima del alumne " + (i + 1) + " es " + maxtot[i] + "\nLa nota maxima del alumne " + (i + 1) + " es " + maxtot[i]);
+
         }
     }
-    
+
 }
