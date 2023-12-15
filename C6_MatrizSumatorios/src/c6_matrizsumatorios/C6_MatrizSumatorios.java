@@ -17,20 +17,24 @@ public class C6_MatrizSumatorios {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Creamos las variables y matrizes
         int max = 1000, min = 100, sumtot = 0;
         int mat[][] = new int[4][5];
         //Creamos el primer for anidado para llenar la matriz, calcular el total de cada fila y el total de todo
         for (int i = 0; i < mat.length; i++) {
             int sum1 = 0;
             for (int j = 0; j < mat[i].length; j++) {
+                //Se llena la matriz de valores aleatorios entre 100 y 999
                 mat[i][j] = (int) (Math.random() * (max - min) + min);
                 sum1 += mat[i][j];
                 sumtot += sum1;
+                //Se imprimen las filas
                 System.out.print(mat[i][j]);
                 if (j != mat.length) {
                     System.out.print("\t");
                 }
             }
+            //Se imprimen las sumas de cada fila
             System.out.print("\t|");
             System.out.println("\t" + sum1);
         }
@@ -41,12 +45,13 @@ public class C6_MatrizSumatorios {
             for (int j = 0; j < mat.length; j++) {
                 sum1 += mat[j][i];
             }
+            //Imprimimos las sumas de cada columna
             System.out.print(sum1 + "\t");
             if (i == mat.length) {
                 System.out.print("|");
             }
         }
+        //Imrimimos el total
         System.out.println("\t" + sumtot);
-
     }
 }
